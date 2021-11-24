@@ -1,4 +1,4 @@
-# demo for Storybook by react
+# demo for Storybook by react && ts (todo)
 
 # Getting Started with Create React App
 
