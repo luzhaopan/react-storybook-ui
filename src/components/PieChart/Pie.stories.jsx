@@ -1,10 +1,10 @@
 import React from "react";
 
-import { LineChart } from "./index";
+import { Pie } from "./Pie";
 
 export default {
-  title: "Example/LineChart",
-  component: LineChart,
+  title: "Example/PieChart",
+  component: Pie,
   argTypes: {
     backgroundColor: {
       control: "color",
@@ -12,14 +12,14 @@ export default {
   },
 };
 
-const Template = (args) => <LineChart {...args} />;
+const Template = (args) => <Pie {...args} />;
 
 export const showLegend = Template.bind({});
 showLegend.args = {
   id: "showLegend",
   legend: {
-    orient: "vertical",
-    left: "right",
+    top: "5%",
+    left: "center",
   },
 };
 

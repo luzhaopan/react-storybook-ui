@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Page } from "./index";
+import { Page } from "./Page";
 import * as HeaderStories from "../Header/Header.stories";
 
 export default {
