@@ -43,11 +43,11 @@ yarn storybook or npm run storybook
 ├─ src
 │ │──components
 │ │ │── Button
-│ │ │ │── index.jsx // 组件入口
+│ │ │ │── Button.jsx // 组件
 │ │ │ │── button.css
 │ │ │ │── Button.stories.tsx
 │ │ │── Header
-│ │ │ │── index.jsx // 组件入口
+│ │ │ │── Header.jsx // 组件
 │ │ │ │── header.css
 │ │ │ │── Header.stories.tsx
 │ │ └── ... //参考上述文件夹
