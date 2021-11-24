@@ -1,10 +1,10 @@
 # demo for Storybook by react
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 yarn start
 
-# Add storybook
+## Add storybook
 
 ## create project by create-react-app
 
