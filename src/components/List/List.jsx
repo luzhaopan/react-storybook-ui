@@ -1,57 +1,37 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { action } from "@storybook/addon-actions";
+import { List, Avatar } from "antd";
 
 import "./list.css";
 
-/**
- * Primary UI component for user interaction
- */
-export const List = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+const data = [
+  {
+    title: "Ant Design Title 1",
+  },
+  {
+    title: "Ant Design Title 2",
+  },
+  {
+    title: "Ant Design Title 3",
+  },
+  {
+    title: "Ant Design Title 4",
+  },
+];
+
+export const Lists = ({ primary, backgroundColor, size, label, ...props }) => {
   return (
-    <button
-      onClick={action("button click")}
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
+    <List
+      itemLayout="horizontal"
+      dataSource={data}
+      renderItem={(item) => (
+        <List.Item>
+          <List.Item.Meta
+            avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+            title={<a href="https://ant.design">{item.title}</a>}
+            description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+          />
+        </List.Item>
       )}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}aaaaaa
-    </button>
+    />
   );
-};
-
-List.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
-   * List contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
-  onClick: PropTypes.func,
-};
-
-List.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: "medium",
-  onClick: undefined,
 };
