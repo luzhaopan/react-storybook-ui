@@ -1,17 +1,13 @@
-# demo for Storybook by react
+## demo for Storybook by react
 
-## Getting Started with Create React App
+creat project by Create React App
+npx create-react-app project_name
 
 yarn start
 
 ## Add storybook
 
-## create project by create-react-app
-
-npx create-react-app project_name
 cd project_name
-
-## Add Storybook init
 
 npx sb init
 
